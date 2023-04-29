@@ -1,9 +1,15 @@
+import 'package:assignment/provider/value_provider.dart';
 import 'package:assignment/views/view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:assignment/utils/color_constants.dart';
+import 'package:provider/provider.dart';
 void main(){
-  runApp(Paymentsui(),);
+  runApp(
+    MultiProvider(providers: [
+      ChangeNotifierProvider(create: (_) => ProgressBarValue())
+    ],child: Paymentsui(),)
+  );
 }
 
 class Paymentsui extends StatefulWidget {
