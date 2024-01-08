@@ -24,7 +24,7 @@ class _InteriorState extends State<Interior> {
 
   void fetchData() async {
     final response = await http.get(Uri.parse(
-        'https://script.google.com/macros/s/AKfycbxHDyfQnSFM-pi1zJt8JDvl9zkrqLrYSLX6O6rAY4fsAK0iYKg0aj6niT1bb1r3eIhzcA/exec'));
+        'https://script.google.com/macros/s/AKfycbzAnadjjlQMd76zxFlTMB4f_qhpAlgyX65OFDMwLMLxAjqJJOZoYhwEisnT-d4h9Ik/exec'));
 
     if (response.statusCode == 200) {
       setState(() {
@@ -64,7 +64,7 @@ class _InteriorState extends State<Interior> {
                       child: ListTile(
                         title: ElevatedButton(
                           onPressed: () {},
-                          child: Text('Code: ${data[i]['code']}'),
+                          child: Text('Code: ${data[i]['intcode']}'),
                           style: ButtonStyle(
                             backgroundColor:
                                 MaterialStateProperty.resolveWith<Color>(
@@ -86,7 +86,7 @@ class _InteriorState extends State<Interior> {
                   ? Padding(
                     padding: const EdgeInsets.only(top: 30),
                     child: Text(
-                        'Stock: ${data[_selectedIndex]['stock']}',
+                        'Stock: ${data[_selectedIndex]['intstock']}',
                         style: customtxtstyle(),
                       ),
                   )

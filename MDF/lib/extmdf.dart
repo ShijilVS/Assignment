@@ -24,7 +24,7 @@ class _ExteriorState extends State<Exterior> {
 
   void fetchData() async {
     final response = await http.get(Uri.parse(
-        'https://script.google.com/macros/s/AKfycbxHDyfQnSFM-pi1zJt8JDvl9zkrqLrYSLX6O6rAY4fsAK0iYKg0aj6niT1bb1r3eIhzcA/exec'));
+        'https://script.google.com/macros/s/AKfycbzAnadjjlQMd76zxFlTMB4f_qhpAlgyX65OFDMwLMLxAjqJJOZoYhwEisnT-d4h9Ik/exec'));
 
     if (response.statusCode == 200) {
       setState(() {
